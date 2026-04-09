@@ -1,0 +1,21 @@
+-- CLINIC QUERIES
+
+-- Q1: Revenue by channel
+SELECT sales_channel, SUM(amount) AS revenue
+FROM clinic_sales
+GROUP BY sales_channel;
+
+-- Q2: Monthly revenue
+SELECT MONTH(date) AS month, SUM(amount) AS revenue
+FROM clinic_sales
+GROUP BY month;
+
+-- Q3: Profit or Loss
+SELECT 
+    MONTH(c.date) AS month,
+    SUM(c.amount) AS total_revenue,
+    SUM(e.amount) AS total_expense,
+    (SUM(c.amount) - SUM(e.amount)) AS profit_loss
+FROM clinic_sales c
+JOIN expenses e ON MONTH(c.date) = MONTH(e.date)
+GROUP BY month;
