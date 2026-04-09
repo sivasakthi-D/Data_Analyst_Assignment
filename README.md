@@ -1,0 +1,21 @@
+# Data Analyst Assignment
+
+## SQL
+- Created Hotel and Clinic database
+- Used joins, group by, window functions
+
+## Excel
+- Used VLOOKUP for data mapping
+- Performed time analysis
+
+## Python
+- Converted minutes to hours
+- Removed duplicate characters
+
+## Tools Used
+- MySQL / SQL
+- Excel / Google Sheets
+- Python
+
+## Notes
+- All queries tested successfully
